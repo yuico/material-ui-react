@@ -9,7 +9,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/Styles';
-import { orange } from '@material-ui/core/colors';
+import { green, orange } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   root: {
@@ -25,6 +25,9 @@ const useStyles = makeStyles({
 const theme = createMuiTheme({
   palette: {
     primary: {
+      main: green[500],
+    },
+    secondary: {
       main: orange[500],
     }
   }
