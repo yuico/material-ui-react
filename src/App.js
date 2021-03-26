@@ -6,6 +6,7 @@ import SaveIcon from '@material-ui/icons/Save';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import TextField from '@material-ui/core/TextField';
 
 function CheckboxExample() {
   const [checked, setChecked] = useState(true)
@@ -31,33 +32,43 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <CheckboxExample />
-      <ButtonGroup variant="contained" color="primary">
-        <Button 
-/*           startIcon={<SaveIcon/>} */
-          endIcon={<SaveIcon/>}
-          size="large"
-          style={{
-            fontsize: 15
-          }}
-          herf="#"
-          onClick={() => alert('test')}   
-/*           disabled */
-        >
-          Save
-        </Button>
-        <Button 
-          endIcon={<DeleteIcon/>}
-          size="large"
-          style={{
-            fontsize: 15
-          }}
+        <TextField
+          /* variant="filled" */
+          variant="outlined"
           color="secondary"
-        >
-          Discard
-        </Button>
-      </ButtonGroup>
-        
+          /* type="date" */
+          /* type="time" */
+          type="email"
+          label="The email"
+          /* value="test@email.com" */
+          placeholder="test@email.com"
+        />
+        <CheckboxExample />
+        <ButtonGroup variant="contained" color="primary">
+          <Button 
+  /*           startIcon={<SaveIcon/>} */
+            endIcon={<SaveIcon/>}
+            size="large"
+            style={{
+              fontsize: 15
+            }}
+            herf="#"
+            onClick={() => alert('test')}   
+  /*           disabled */
+          >
+            Save
+          </Button>
+          <Button 
+            endIcon={<DeleteIcon/>}
+            size="large"
+            style={{
+              fontsize: 15
+            }}
+            color="secondary"
+          >
+            Discard
+          </Button>
+        </ButtonGroup>
       </header>
     </div>
   );
