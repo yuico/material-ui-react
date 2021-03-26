@@ -8,7 +8,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import TextField from '@material-ui/core/TextField';
 
-import { makeStyles } from '@material-ui/core/Styles';
+import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/Styles';
+import { orange } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   root: {
@@ -18,6 +19,14 @@ const useStyles = makeStyles({
     borderRadius: 15,
     color: 'white',
     padding: '5px 30px'
+  }
+})
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: orange[500],
+    }
   }
 })
 
@@ -48,48 +57,50 @@ function CheckboxExample() {
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <ButtonStyled />
-        <TextField
-          /* variant="filled" */
-          variant="outlined"
-          color="secondary"
-          /* type="date" */
-          /* type="time" */
-          type="email"
-          label="The email"
-          /* value="test@email.com" */
-          placeholder="test@email.com"
-        />
-        <CheckboxExample />
-        <ButtonGroup variant="contained" color="primary">
-          <Button 
-  /*           startIcon={<SaveIcon/>} */
-            endIcon={<SaveIcon/>}
-            size="large"
-            style={{
-              fontsize: 15
-            }}
-            herf="#"
-            onClick={() => alert('test')}   
-  /*           disabled */
-          >
-            Save
-          </Button>
-          <Button 
-            endIcon={<DeleteIcon/>}
-            size="large"
-            style={{
-              fontsize: 15
-            }}
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <header className="App-header">
+          <ButtonStyled />
+          <TextField
+            /* variant="filled" */
+            variant="outlined"
             color="secondary"
-          >
-            Discard
-          </Button>
-        </ButtonGroup>
-      </header>
-    </div>
+            /* type="date" */
+            /* type="time" */
+            type="email"
+            label="The email"
+            /* value="test@email.com" */
+            placeholder="test@email.com"
+          />
+          <CheckboxExample />
+          <ButtonGroup variant="contained" color="primary">
+            <Button 
+    /*           startIcon={<SaveIcon/>} */
+              endIcon={<SaveIcon/>}
+              size="large"
+              style={{
+                fontsize: 15
+              }}
+              herf="#"
+              onClick={() => alert('test')}   
+    /*           disabled */
+            >
+              Save
+            </Button>
+            <Button 
+              endIcon={<DeleteIcon/>}
+              size="large"
+              style={{
+                fontsize: 15
+              }}
+              color="secondary"
+            >
+              Discard
+            </Button>
+          </ButtonGroup>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
