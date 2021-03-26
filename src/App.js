@@ -8,11 +8,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Button 
-          size="small"
+          size="large"
+          style={{
+            fontsize: 15
+          }}
           herf="#"
           onClick={() => alert('test')} 
           variant="contained" 
           color="secondary"
+/*           disabled */
         >
           Hello World
         </Button>
