@@ -15,6 +15,9 @@ import 'fontsource-roboto';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 const useStyles = makeStyles({
   root: {
     background: 'linear-gradient(45deg, #FE6B8B, #FF8E53)',
@@ -87,6 +90,17 @@ function App() {
               Learn how to use Material UI
             </Typography>
             <ButtonStyled />
+            <Grid container spacing={2} justify="center" style={{ margin: 10}}>
+              <Grid item>
+                <Paper style={{ height: 75, width: 50, }}/>
+              </Grid>
+              <Grid item>
+                <Paper style={{ height: 75, width: 50, }}/>
+              </Grid>
+              <Grid item>
+                <Paper style={{ height: 75, width: 50, }}/>
+              </Grid>
+            </Grid>
             <TextField
               /* variant="filled" */
               variant="outlined"
