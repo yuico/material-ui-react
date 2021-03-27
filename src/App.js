@@ -91,14 +91,14 @@ function App() {
             </Typography>
             <ButtonStyled />
             <Grid container spacing={2} justify="center" style={{ margin: 10}}>
-              <Grid item>
-                <Paper style={{ height: 75, width: 50, }}/>
+              <Grid item xs={3} sm={6}>
+                <Paper style={{ height: 75, width: '100%', }}/>
               </Grid>
-              <Grid item>
-                <Paper style={{ height: 75, width: 50, }}/>
+              <Grid item xs={3}>
+                <Paper style={{ height: 75, width: '100%', }}/>
               </Grid>
-              <Grid item>
-                <Paper style={{ height: 75, width: 50, }}/>
+              <Grid item xs={3}>
+                <Paper style={{ height: 75, width: '100%', }}/>
               </Grid>
             </Grid>
             <TextField
